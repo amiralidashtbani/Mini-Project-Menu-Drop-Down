@@ -8,3 +8,143 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: Tanha;
+}
+
+.header-section {
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.header-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.8) 50% , rgba(233,233,2333,0.4));
+    z-index: 1;
+}
+
+.container {
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
+    padding-top: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.header-container{
+    background-color: rgba(239, 239, 239,0.3);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    color: #fff;
+}
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff
+}
+
+.item {
+    padding: 18px 10px;
+}
+
+.item::after {
+    transition: transform 0.3s;
+    content: '';
+    border-bottom: 2px solid #f6364b;
+    display: block;
+    transform: scaleX(0);
+}
+
+.item:hover::after {
+    transform: scaleX(1);
+}
+
+.menu {
+    position: relative;
+    transition: all 0.5s;
+}
+
+.menu::before {
+    content: '';
+    display: block;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    right: 98%;
+    top: 38%;
+    transform: rotate(45deg);
+    transition: transform 0.4s;
+}
+
+.menu:hover::before {
+    transform: rotate(225deg);
+}
+
+.sub-menu {
+    position: absolute;
+    background-color: rgba(239, 239, 239,0.3);
+    width: 150px;
+    border-radius: 10px;
+    top: 100%;
+    right: -10px;
+    display: none;
+    
+}
+
+.menu-item , .menu-item-sub {
+    padding: 12px;
+}
+
+.menu-item:hover {
+    background-color: #eee;
+    color: #000;
+}
+
+.menu-item-sub:hover {
+    background-color: #eee;
+    color: #000;
+}
+
+.menu:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu2 {
+    position: absolute;
+    background-color: rgba(239, 239, 239,0.3);
+    width: 150px;
+    border-radius: 10px;
+    top: 50%;
+    right: 150px;
+    color: #fff;
+    display: none;
+}
+
+.i2:hover .sub-menu2{
+    display: block;
+}
